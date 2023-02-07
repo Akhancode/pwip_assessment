@@ -3,17 +3,21 @@ import "./SearchBar.css";
 const SearchBar = (props) => {
   const ACTIONTYPES = [
     null,
-    "ADD_EMPLOYEE",
-    "INITIATE_APPLICATION",
-    "SUBMIT_APPLICATION",
+    'DARI_REFRESH_TOKEN',
+  'DARI_APP_LOGIN',
+  'INITIATE_APPLICATION',
+  'SUBMIT_APPLICATION',
+  'ADD_EMPLOYEE'
   ];
   const APPLICATIONTYPES = [
     null,
-    "ADD_COMPANY",
-    "ADD_COMPANY_EMPLOYEE",
-    "ADD_POA",
-    "CERT_TITLE_DEED_PLOT",
-    "CERT_PROP_OWNERSHIP",
+  'CERT_TITLE_DEED_PLOT',
+  'LEASE_REGISTRATION',
+  'ADD_POA',
+  'ADD_COMPANY',
+  'ADD_COMPANY_EMPLOYEE',
+  'CERT_PROP_OWNERSHIP',
+  'LEASE_CLOSURE'
   ];
 
   const { search, setSearch,url,setUrl } = props;

@@ -12,9 +12,6 @@ app.get('/', (req, res)=>{
 });
 
 
-
-
-
 //REGULAR MIDDLEWARE
 app.use(express.json())
 app.use(cors({ origin: 'http://localhost:3000'}));
@@ -25,7 +22,7 @@ app.use(cors({ origin: 'http://localhost:3000'}));
 const loggerHome = require('./routes/loggerHome');
 
 
-// ROUTER MIDDLEWARE
+// ROUTER MIDDLEWARE pass to route
 app.use('/loggerHome',loggerHome)
 
 
