@@ -163,6 +163,7 @@ const LoggerSearchPage = () => {
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
   const [url, setUrl] = useState(`${process.env.REACT_APP_MY_BASEURL}/loggerHome/all_logs?`);
+//   const [url, setUrl] = useState(`https://crowded-sunglasses-crow.cyclic.app/loggerHome/all_logs?`);
   const [sortUrl, setSortUrl] = useState(null);
   const [status, setStatus] = useState(null);
   const [totalItem, setTotalItem] = useState(0);
@@ -190,7 +191,6 @@ const LoggerSearchPage = () => {
 
     //change status : loading finished
     setStatus(null);
-    console.log(result.data.length);
   };
 
   const getDataByPage = async (currentPage) => {
