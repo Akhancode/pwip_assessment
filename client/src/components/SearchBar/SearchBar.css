@@ -1,33 +1,33 @@
-
-.SearchBarContainer{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    /* border:solid; */
-    overflow: auto;
-    flex-shrink: 1;
-    border-bottom:1px #c6c6c6 solid;
+.SearchBarContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  /* border:solid; */
+  overflow: auto;
+  flex-shrink: 1;
+  padding-bottom: 0.7rem;
+  /* border-bottom:1px #c6c6c6 solid; */
 }
-option{
-    font-size: 1rem;
-    font-family: sans-serif;
+option {
+  font-size: 1rem;
+  font-family: sans-serif;
 }
-.logIdContainer{
-   margin-bottom: 1rem;
-   position:relative;
+.logIdContainer {
+  margin-bottom: 1rem;
+  position: relative;
 }
-.logIdContainer input ,.logIdContainer select{
-    font-size: 1rem;
+.logIdContainer input,
+.logIdContainer select {
+  font-size: 1rem;
   /* Form Field */
 
   box-sizing: border-box;
 
   /* Auto layout */
 
-
   align-items: flex-start;
-  /* padding: 12px 16px; */
-  padding-block: .4rem;
+  padding-block: 0.4rem;
+  padding-inline: 0.1rem;
 
   gap: 12px;
 
@@ -43,39 +43,39 @@ option{
   border-radius: 6px;
 
   /* Inside auto layout */
-
+   
   flex: none;
   order: 1;
   align-self: stretch;
+  text-align: center;
+  /* padding: 0; */
   /* flex-grow: 0; */
-
- 
 }
-.logIdContainer input:focus{
-    background-color: white;
-  }
-
-.logIdContainer{
-    display: flex;
-    flex-direction: column;
-    width: min-content;
-    align-items: start;
-    margin: .8rem;
+.logIdContainer input:focus {
+  background-color: white;
 }
-.logIdContainer .LogID{
-    font-size: 1.1rem;
-    margin-bottom: .5rem;
-}
-.searchBtn{
-    background-color: #0f489b;
-    color: white;
-    font-weight: bold;
-    padding: 0.6rem;
-    width: 10rem;
-    position: absolute;
-    bottom: 0;
-    border-radius: 0.5rem;
-    border: none;
 
-    cursor: pointer;
+.logIdContainer {
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  align-items: start;
+  margin: 0.8rem;
+}
+.logIdContainer .LogID {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.searchBtn {
+  background-color: #0f489b;
+  color: white;
+  font-weight: bold;
+  padding: 0.6rem;
+  width: 10rem;
+  position: absolute;
+  bottom: 0;
+  border-radius: 0.5rem;
+  border: none;
+
+  cursor: pointer;
 }

@@ -3,15 +3,15 @@ import "./LoggerSearchPage.css";
 import PaginationBar from "../components/PaginationBar/PaginationBar";
 import axios from "axios";
 import SearchBar from "../components/SearchBar/SearchBar";
-
-
-
+import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
 
 const LoggerSearchPage = () => {
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
-  const [url, setUrl] = useState(`${process.env.REACT_APP_MY_BASEURL}/loggerHome/all_logs?`);
-//   const [url, setUrl] = useState(`https://crowded-sunglasses-crow.cyclic.app/loggerHome/all_logs?`);
+  const [url, setUrl] = useState(
+    `${process.env.REACT_APP_MY_BASEURL}/loggerHome/all_logs?`
+  );
+  //   const [url, setUrl] = useState(`https://crowded-sunglasses-crow.cyclic.app/loggerHome/all_logs?`);
   const [sortUrl, setSortUrl] = useState(null);
   const [status, setStatus] = useState(null);
   const [totalItem, setTotalItem] = useState(0);
@@ -35,7 +35,7 @@ const LoggerSearchPage = () => {
 
     //update data with new api call
     setData(result.data.logs);
-    setTotalItem(result.data.totalItem)
+    setTotalItem(result.data.totalItem);
 
     //change status : loading finished
     setStatus(null);
@@ -46,10 +46,10 @@ const LoggerSearchPage = () => {
     let result;
 
     if (sortUrl) {
-    //   console.log("taking sorted url");
+      //   console.log("taking sorted url");
       result = await axios.get(`${sortUrl}page=${currentPage}`);
     } else {
-    //   console.log("taking url");
+      //   console.log("taking url");
       result = await axios.get(`${url}page=${currentPage}`);
     }
     setData(result.data.logs);
@@ -61,8 +61,7 @@ const LoggerSearchPage = () => {
     getDataByPage(page);
   }, [page]);
 
-
-//  useEffect :  render on change in url
+  //  useEffect :  render on change in url
   useEffect(() => {
     const fetchData = async () => {
       setStatus("loading");
@@ -87,45 +86,45 @@ const LoggerSearchPage = () => {
         <tr>
           <th className="thead">
             <label htmlFor="">LogID</label>
-            <span onClick={() => sortFunction("logID")} className="sort">
-              ⬇
-            </span>
+            <ArrowCircleDownIcon
+              onClick={() => sortFunction("logID")}
+              className="sortIcon"
+            />
           </th>
           <th className="thead">
             <label htmlFor="">Application Type</label>
-            <span
+            <ArrowCircleDownIcon
               onClick={() => sortFunction("applicationType")}
-              className="sort"
-            >
-              ⬇
-            </span>
+              className="sortIcon"
+            />
           </th>
           <th className="thead">
             <label htmlFor="">Application ID </label>
-            <span
+            <ArrowCircleDownIcon
+              className="sortIcon"
               onClick={() => sortFunction("applicationId")}
-              className="sort"
-            >
-              ⬇
-            </span>
+            />
           </th>
           <th className="thead">
             <label htmlFor="">Action</label>
-            <span onClick={() => sortFunction("actionType")} className="sort">
-              ⬇
-            </span>
+            <ArrowCircleDownIcon
+              className="sortIcon"
+              onClick={() => sortFunction("actionType")}
+            />
           </th>
           <th className="thead">
             <label htmlFor="">Action Details</label>
-            <span onClick={() => sortFunction("actionType")} className="sort">
-              ⬇
-            </span>
+            <ArrowCircleDownIcon
+              className="sortIcon"
+              onClick={() => sortFunction("actionType")}
+            />
           </th>
           <th className="thead">
             <label htmlFor="">Date:Time</label>
-            <span onClick={() => sortFunction("latest")} className="sort">
-              ⬇
-            </span>
+            <ArrowCircleDownIcon
+              onClick={() => sortFunction("latest")}
+              className="sortIcon"
+            />
           </th>
         </tr>
 

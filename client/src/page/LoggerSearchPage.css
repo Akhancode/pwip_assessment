@@ -3,8 +3,7 @@
     background-color: white;
     height: 100%;
     flex: 12;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 0.5rem;
+    
 }
 .LoggerSearchPageContainer .tableData{
     
@@ -12,6 +11,8 @@
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 2.5rem;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 0.3rem;
 }
 
 .tableData .tHeadIcon{
@@ -48,6 +49,14 @@
     font-size: 1.2rem;
     padding: 0.1rem;
 }
+.sortIcon{
+    position: absolute;
+    margin-block: auto;
+    margin-left:0.6rem ;
+    background-color:  rgb(183, 222, 241);
+    border-radius: 50%;
+    background-clip: padding-box;
+}
 
 .tableData tr{
     padding-top: 12px;
@@ -67,9 +76,9 @@
 .loading{
     opacity: 0.4;
 }
-.sort{
+.sortIcon{
     cursor: pointer;
 }
-.sort:hover{
+.sortIcon:hover{
     opacity: 0.5;
 }
