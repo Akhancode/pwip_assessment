@@ -15,6 +15,7 @@ const LoggerSearchPage = () => {
   const [sortUrl, setSortUrl] = useState(null);
   const [status, setStatus] = useState(null);
   const [totalItem, setTotalItem] = useState(0);
+  
 
   const [search, setSearch] = useState({
     logId: null,
