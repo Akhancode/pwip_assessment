@@ -65,7 +65,6 @@ class WhereClause {
   }
 
   sort() {
-    console.log("sorting ");
     if (!this.bigQ.sort) return this; //Guardian Clause for clean code
 
     //RECENT SORTING OLD TO NEW (DATE) using class Date

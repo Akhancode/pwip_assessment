@@ -198,10 +198,10 @@ const LoggerSearchPage = () => {
     let result;
 
     if (sortUrl) {
-      console.log("taking sorted url");
+    //   console.log("taking sorted url");
       result = await axios.get(`${sortUrl}page=${currentPage}`);
     } else {
-      console.log("taking url");
+    //   console.log("taking url");
       result = await axios.get(`${url}page=${currentPage}`);
     }
     setData(result.data.logs);
