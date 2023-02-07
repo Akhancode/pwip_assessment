@@ -79,3 +79,6 @@ option {
 
   cursor: pointer;
 }
+.searchBtn:hover{
+    opacity: 0.7;
+}
